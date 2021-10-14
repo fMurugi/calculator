@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .calc {
+        width: 100px;
+        background-color: black;
+        color: white;
+
+    }
+
+     /* .screen{ 
+     font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align:right;
+    padding:2px,5px;
+      */
+    /* background-color: red;  */
+
+
+
+
+    }
+
+    .calc-buttons {
+        background-color: rgb(223, 202, 202);
+        color: black;
+
+        border: none;
+        border-radius: 0;
+        font-size: 140px;
+        padding: 5px;
+    }
+
+    .calc-button:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .calc-button:active {
+        background-color: rgb(117, 114, 114);
+    }
+
+    .double {
+        width: 50%;
+
+    }
+
+    .tripple {
+        width: 75%;
+    }
+
+    .double,
+    .tripple:hover {
+        cursor: pointer;
+    }
+
+    .calc-row {
+        display: flex;
+        align-content: stretch;
+        justify-content: space-between;
+        margin-bottom: 5%;
+
+    }
+
+    .cal-row.last-child {
+        background-color: chocolate;
+    }
+</style>
+
+<body>
+    <form name="calculator">
+        <div class="calc">
+            <section class="screen">
+                <div class="display">
+
+                </div>
+            </section>
+            <section class="calc-buttons">
+                <!-- first div to hold the display space then an input with type text since operators are numbers and operands are symbols  -->
+                <dv>
+                    <tr><input type="text" class="screen" name="display" id="diplay" disabled></tr>
+                </dv>
+                <div class="calc-row">
+                    <tr>
+                        <td> <input type = "button" class = "double calc-button" name = "clear" value = "c" onclick = "calculator.display.value = ''"></td>
+                        <td> <input type = "button" class = "calc-button" name = "clear" value = "←" onclick = "calculator.display.value = ''"></td>
+                        <td> <input type = "button" class = "calc-button" name = "divide" value = "/" onclick = "calculator.display.value += '/'"></td>
+                    </tr>
+                    <!-- <button class="double cal-button">C</button>
+                    <button class="calc-button">←</button>
+                    <button class="calc-button">÷</button> -->
+                </div>
+                <div class="calc-row">
+                    <tr>
+                        <td><input type="button" class="calc-button" name="seven" value="7"
+                                onclick="calculator.display.value +='7'"></td>
+                        <td><input type="button" class="calc-button" name="eight" value="8"
+                                onclick="calculator.display.value +='8'"></td>
+                        <td><input type="button" class="calc-button" name="nine" value="9"
+                                onclick="calculator.display.value +='9'"></td>
+                        <td><input type="button" class="calc-button" name="multiply" value="*"
+                                onclick="calculator.display.value +='*'"></td>
+                    </tr>
+                </div>
+                <div class="calc-row">
+                    <tr>
+                        <td><input type="button" class="calc-button" name="four" value="4"
+                                onclick="calculator.display.value +='4'"></td>
+                        <td><input type="button" class="calc-button" name="five" value="5"
+                                onclick="calculator.display.value +='5'"></td>
+                        <td><input type="button" class="calc-button" name="six" value="6"
+                                onclick="calculator.display.value +='6'"></td>
+                        <td><input type="button" class="calc-button" name="addition" value="+"
+                                onclick="calculator.display.value +='+'"></td>
+                    </tr>
+
+                </div>
+                <div class="calc-row">
+                    <tr>
+                        <td><input type="button" class="calc-button" name="one" value="1"
+                                onclick="calculator.display.value +='1'"></td>
+                        <td><input type="button" class="calc-button" name="two" value="2"
+                                onclick="calculator.display.value +='2'"></td>
+                        <td><input type="button" class="calc-button" name="three" value="3"
+                                onclick="calculator.display.value +='3'"></td>
+                        <td><input type="button" class="calc-button" name="substraction" value="-"
+                                onclick="calculator.display.value +='-'"></td>
+                    </tr>
+
+                </div>
+                <div class="calc-row">
+                    <tr>
+                        <td><input type="button" class=" tripple calc-button" name="zero" value="0"
+                                onclick="calculator.display.value +='0'"></td>
+                        <td><input type="button" class="calc-button" name="equal" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                    
+                </tr>
+                
+            </div>
+
+        </section>
+    </div>
+    </form>
+    <script src=" ./calc.js"></script>
+</body>
+
+</html>
