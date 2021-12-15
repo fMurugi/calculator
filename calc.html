@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
+    <title>online free calculator</title>
 </head>
 <style>
     * {
@@ -13,14 +13,26 @@
     }
 
     body {
-        padding: 20px;
-        margin: 0;
+    }
+    .nav{
+        height:60px;
+        background-color: rgba(8, 16, 20, 0.803);
+        color:white;
+       
+    }
+    .calc-container{
+        width:200px;
+        
     }
 
     .calc {
-        width: 100px;
+        width: 200px;
         background-color: black;
         color: white;
+        padding: 2px;
+        border: 10px solid black;
+        border-radius: 5%;
+        margin:5px auto;
 
     }
 
@@ -36,15 +48,25 @@
 
 
     }
+    .displayScreen{
+        width: 200px;
+
+    }
+    .screen{
+        width:100%;
+        padding-bottom: 5%;
+        margin-bottom: 4px;
+    }
 
     .calc-buttons {
         background-color: rgb(223, 202, 202);
         color: black;
-
         border: none;
         border-radius: 0;
-        font-size: 140px;
         padding: 5px;
+    }
+    .calc-button{
+        width: 25%;
     }
 
     .calc-button:hover {
@@ -84,18 +106,22 @@
 </style>
 
 <body>
-    <form name="calculator">
+    <div class="nav">
+        <ul>
+            <li>linear algebra</li>
+            <li>descrete maths</li>
+            <li>matrices</li>
+        </ul>
+    </div>
+    <form name="calculator"class="calc-Container">
         <div class="calc">
-            <section class="screen">
-                <div class="display">
-
-                </div>
+                
             </section>
             <section class="calc-buttons">
                 <!-- first div to hold the display space then an input with type text since operators are numbers and operands are symbols  -->
-                <dv>
-                    <tr><input type="text" class="screen" name="display" id="diplay" disabled></tr>
-                </dv>
+                <div class="displayScreen">
+                    <tr><input type="text" class="screen" name="display" id="diplay" ></tr>
+                </div>
                 <div class="calc-row">
                     <tr>
                         <td> <input type = "button" class = "double calc-button" name = "clear" value = "c" onclick = "calculator.display.value = ''"></td>
